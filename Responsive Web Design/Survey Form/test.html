@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="title">Surver Form</h1>
+    <p id="description">Thank you for taking the time for us</p>
+    <form method="post" id="survey-form">
+        <fieldset>
+            <label for="name-label" id="name-label"><h4>Name</h4><input type="text" id="name" placeholder=" Enter Your Name" class="main" required></label>
+            <label for="email-label" id="email-label"><h4>Email</h4><input type="email" id="email" placeholder=" Enter Your Email" class="main" required></label>
+            <label for="number-label" id="number-label"><h4>Age</h4> <input type="number" id="number" min="21" max="31" placeholder=" Age" class="main" required></label>
+            <label for="dropdown"><h4>Which option best describes your current role</h4>
+                <select id="dropdown" class="main">
+                    <option value="" >Select current role</option>
+                    <option value="1">Student</option>
+                    <option value="2">Part Time</option>
+                    <option value="3">Full Time</option>
+                    <option value="4">Other</option>
+                </select>
+            </label>
+
+            <!-- SUGGEST -->
+            <div class="group">
+            <h4>Would you recommend to a friend?</h4>
+            <label for="definitely"><input type="radio" name="user" id="definitely" class="cek" value="1">Definitely</label>
+            <label for="maybe"><input type="radio" name="user" id="maybe" class="cek" value="2">Maybe</label>
+            <label for="no"><input type="radio" name="user" id="no" class="cek" value="3">No</label>
+            </div>
+
+            <!-- IMPROVE -->
+            <h4>What would you like to see improved?</h4>
+            <label for="frontend"><input type="checkbox" name="frontend" id="frontend" class="suggest" value="1">Front-end Projects</label>
+            <label for="backend"><input type="checkbox" name="backend" id="backend" class="suggest" value="2">Back-end Projects</label>
+            <label for="data"><input type="checkbox" name="data" id="data" class="suggest" value="3">Data Visualization</label>
+            <label for="cyber"><input type="checkbox" name="cyber" id="cyber" class="suggest" value="4">Cyber Security</label>
+
+            <!-- COMMENT -->
+            <h4>What would you like to ask?</h4>
+            <label for="comment">
+                <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+            </label>
+        </fieldset>
+        <input type="submit" value="Submit" id="submit">
+    </form>
+</body>
+</html>
